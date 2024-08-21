@@ -78,7 +78,7 @@ import (
 )
 
 func init() {
-	sql.Register("presto", &sqldriver{})
+	sql.Register("presto", &SqlDriver{})
 }
 
 var (
@@ -119,13 +119,13 @@ const (
 	accessTokenConfig = "AccessToken"
 )
 
-type sqldriver struct{}
+type SqlDriver struct{}
 
-func (d *sqldriver) Open(name string) (driver.Conn, error) {
+func (d *SqlDriver) Open(name string) (driver.Conn, error) {
 	return newConn(name)
 }
 
-var _ driver.Driver = &sqldriver{}
+var _ driver.Driver = &SqlDriver{}
 
 // Config is a configuration that can be encoded to a DSN string.
 type Config struct {
