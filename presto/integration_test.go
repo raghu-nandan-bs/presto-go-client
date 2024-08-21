@@ -67,7 +67,7 @@ func integrationOpen(t *testing.T, dsn ...string) *sql.DB {
 }
 
 // integration tests based on python tests:
-// https://github.com/prestodb/presto-python-client/tree/master/integration_tests
+// https://github.com/raghu-nandan-bs/presto-python-client/tree/master/integration_tests
 
 func TestIntegrationEnabled(t *testing.T) {
 	dsn := *integrationServerFlag

@@ -44,7 +44,7 @@
 // The driver should be used via the database/sql package:
 //
 //	import "database/sql"
-//	import _ "github.com/prestodb/presto-go-client/presto"
+//	import _ "github.com/raghu-nandan-bs/presto-go-client/presto"
 //
 //	dsn := "http://user@localhost:8080?catalog=default&schema=test"
 //	db, err := sql.Open("presto", dsn)

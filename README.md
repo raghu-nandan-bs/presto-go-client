@@ -3,7 +3,7 @@
 A [Presto](https://prestodb.io) client for the [Go](https://golang.org) programming language.
 
 [![Build Status](https://secure.travis-ci.org/prestodb/presto-go-client.png)](http://travis-ci.org/prestodb/presto-go-client)
-[![GoDoc](https://godoc.org/github.com/prestodb/presto-go-client?status.svg)](https://godoc.org/github.com/prestodb/presto-go-client)
+[![GoDoc](https://godoc.org/github.com/raghu-nandan-bs/presto-go-client?status.svg)](https://godoc.org/github.com/raghu-nandan-bs/presto-go-client)
 
 ## Features
 
@@ -32,7 +32,7 @@ You need a working environment with Go installed and $GOPATH set.
 Download and install presto database/sql driver:
 
 ```bash
-go get github.com/prestodb/presto-go-client/presto
+go get github.com/raghu-nandan-bs/presto-go-client/presto
 ```
 
 Make sure you have Git installed and in your $PATH.
@@ -49,7 +49,7 @@ Example:
 
 ```go
 import "database/sql"
-import _ "github.com/prestodb/presto-go-client/presto"
+import _ "github.com/raghu-nandan-bs/presto-go-client/presto"
 
 dsn := "http://user@localhost:8080?catalog=default&schema=test"
 db, err := sql.Open("presto", dsn)
@@ -67,7 +67,7 @@ HTTP Basic authentication **is only supported on encrypted connections over HTTP
 
 #### Kerberos authentication
 
-This driver supports Kerberos authentication by setting up the Kerberos fields in the [Config](https://godoc.org/github.com/prestodb/presto-go-client/presto#Config) struct.
+This driver supports Kerberos authentication by setting up the Kerberos fields in the [Config](https://godoc.org/github.com/raghu-nandan-bs/presto-go-client/presto#Config) struct.
 
 Please refer to the [Coordinator Kerberos Authentication](https://prestodb.io/docs/current/security/server.html) for server-side configuration.
 
@@ -99,7 +99,7 @@ The Data Source Name is a URL with a mandatory username, and optional query stri
 http[s]://user[:pass]@host[:port][?parameters]
 ```
 
-The easiest way to build your DSN is by using the [Config.FormatDSN](https://godoc.org/github.com/prestodb/presto-go-client/presto#Config.FormatDSN) helper function.
+The easiest way to build your DSN is by using the [Config.FormatDSN](https://godoc.org/github.com/raghu-nandan-bs/presto-go-client/presto#Config.FormatDSN) helper function.
 
 The driver supports both HTTP and HTTPS. If you use HTTPS it's recommended that you also provide a custom `http.Client` that can validate (or skip) the security checks of the server certificate, and/or to configure TLS client authentication.
 
